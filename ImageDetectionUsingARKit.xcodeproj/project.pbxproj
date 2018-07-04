@@ -13,6 +13,8 @@
 		03469AD420E0C0A500A949BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03469AD220E0C0A500A949BD /* Main.storyboard */; };
 		03469AD620E0C0A600A949BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03469AD520E0C0A600A949BD /* Assets.xcassets */; };
 		03469AD920E0C0A600A949BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03469AD720E0C0A600A949BD /* LaunchScreen.storyboard */; };
+		03D7EB0220EA51AF00221A8B /* About.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03D7EB0120EA51AF00221A8B /* About.sks */; };
+		03D7EB0420EA5A6200221A8B /* WhatWeDo.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03D7EB0320EA5A6200221A8B /* WhatWeDo.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		03469AD520E0C0A600A949BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03469AD820E0C0A600A949BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03469ADA20E0C0A600A949BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03D7EB0120EA51AF00221A8B /* About.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = About.sks; sourceTree = "<group>"; };
+		03D7EB0320EA5A6200221A8B /* WhatWeDo.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WhatWeDo.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		03469ACB20E0C0A400A949BD /* ImageDetectionUsingARKit */ = {
 			isa = PBXGroup;
 			children = (
-				03469ACC20E0C0A400A949BD /* AppDelegate.swift */,
-				03469ACE20E0C0A500A949BD /* art.scnassets */,
-				03469AD020E0C0A500A949BD /* ViewController.swift */,
-				03469AD220E0C0A500A949BD /* Main.storyboard */,
-				03469AD520E0C0A600A949BD /* Assets.xcassets */,
-				03469AD720E0C0A600A949BD /* LaunchScreen.storyboard */,
-				03469ADA20E0C0A600A949BD /* Info.plist */,
+				03469AE120E0C11100A949BD /* Assets */,
+				03469AE220E0C11C00A949BD /* Storyboards */,
+				03469AE020E0C10600A949BD /* Classes */,
+				03469AE320E0C12200A949BD /* Resources */,
 			);
 			path = ImageDetectionUsingARKit;
+			sourceTree = "<group>";
+		};
+		03469AE020E0C10600A949BD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03469ACC20E0C0A400A949BD /* AppDelegate.swift */,
+				03469AD020E0C0A500A949BD /* ViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		03469AE120E0C11100A949BD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				03469ACE20E0C0A500A949BD /* art.scnassets */,
+				03469AD520E0C0A600A949BD /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		03469AE220E0C11C00A949BD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				03469AD220E0C0A500A949BD /* Main.storyboard */,
+				03469AD720E0C0A600A949BD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		03469AE320E0C12200A949BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03D7EB0120EA51AF00221A8B /* About.sks */,
+				03D7EB0320EA5A6200221A8B /* WhatWeDo.sks */,
+				03469ADA20E0C0A600A949BD /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03469ACF20E0C0A500A949BD /* art.scnassets in Resources */,
+				03D7EB0420EA5A6200221A8B /* WhatWeDo.sks in Resources */,
 				03469AD920E0C0A600A949BD /* LaunchScreen.storyboard in Resources */,
+				03D7EB0220EA51AF00221A8B /* About.sks in Resources */,
 				03469AD620E0C0A600A949BD /* Assets.xcassets in Resources */,
 				03469AD420E0C0A500A949BD /* Main.storyboard in Resources */,
 			);
@@ -284,14 +324,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ImageDetectionUsingARKit/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5GL3E4GW7P;
+				INFOPLIST_FILE = "$(SRCROOT)/ImageDetectionUsingARKit/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yudiz.ImageDetectionUsingARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "88bf3f20-c276-4ee7-b9b6-97b16db6962a";
+				PROVISIONING_PROFILE_SPECIFIER = "iPhone WiledCard";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,14 +344,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ImageDetectionUsingARKit/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/ImageDetectionUsingARKit/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yudiz.ImageDetectionUsingARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
